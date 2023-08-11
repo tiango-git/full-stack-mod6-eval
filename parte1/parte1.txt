@@ -1,0 +1,14 @@
+-- carpeta proyecto
+mkdir proyecto_vehiculos_django
+cd proyecto_vehiculos_django
+
+-- ambiente Python
+conda create --name proyecto_vehiculos_django Python
+conda activate proyecto_vehiculos_django
+
+-- instalar librerías
+pip install django==4.0.5
+pip install django-bootstrap-v5==1.0.11
+pip install django-crispy-forms==1.14.0
+pip install crispy-bootstrap5==0.6
+

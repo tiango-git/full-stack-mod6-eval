@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% load crispy_forms_tags %}
+    <div class="addfotm">
+        <h3>Ingresar Vehículo</h3>
+        <form method="post" class="form-horizontal">
+            {% csrf_token %}
+            <div class="form-group row mt-3">
+                <label class="col-sm-2">Marca</label>
+                <div class="col-sm-6">
+                    {{ form.marca }}
+                </div>
+                
+            </div>
+            <div class="form-group row mt-3">
+                <label class="col-sm-2">Modelo</label>
+                <div class="col-sm-10">
+                    {{ form.modelo }}
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <label class="col-sm-2 col-form-label">Serial Carrocería:</label>
+                <div class="col-sm-10">
+                    {{ form.serial_carroceria }}
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <label class="col-sm-2 col-form-label">Serial Motor:</label>
+                <div class="col-sm-10">
+                    {{ form.serial_motor }}
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <label class="col-sm-2 col-form-label">Categoría:</label>
+                <div class="col-sm-10">
+                    {{ form.categoria }}
+                </div>
+            </div>
+            <div class="form-group row mt-3">
+                <label class="col-sm-2 col-form-label">Precio:</label>
+                <div class="col-sm-10">
+                    {{ form.precio }}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        </form>
+    </div>
+{% endblock content %}
+    
